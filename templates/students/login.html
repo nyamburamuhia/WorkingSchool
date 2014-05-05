@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}School | Students Login{% endblock %}
+
+{% block content %} 
+<form action="/student/login/" method="post">	
+<table class="login_table">
+	<tr><td><label>Username:</label></td><td><input type="text" name="username" /></td></tr>
+	<tr><td><label>Password:</label></td><td><input type="password" name="password" /></td></tr>
+	<tr><td><input type="submit" name="LoginStudent" value="Login Student" /></td></tr>
+</table>
+</form>
+<a href="/student/register">Create Student Account Here</a><br/>
+<a href="/student/list_students">View All Students Here</a>
+
+{% endblock %}

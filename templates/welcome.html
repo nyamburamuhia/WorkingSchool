@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{%block title%}School | Welcome{%endblock%}
+{%block content%}
+<div class="login_options">
+	Welcome to School Project by Access Energy
+	<div class="login_student">
+		<form method="post" action="/student/login_form/">			
+			<input type="submit" name="LoginAsStudent" value="Login as Student" />
+		</form>
+	</div>
+	<div class="login_teacher">		
+		<form method="post" action="/teacher/login_form/">			
+			<input type="submit" name="LoginAsTeacher" value="Login as Teacher" />
+		</form>
+	</div>
+</div>
+{%endblock%}

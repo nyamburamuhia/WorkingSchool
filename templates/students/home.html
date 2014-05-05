@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}School | Home{% endblock %}
+
+{% block content %} 
+
+<h2>Welcome {{student.first_name}} {{student.last_name}},</h2>
+
+First Name: {{student.first_name}}<br/>
+Last Name: {{student.last_name}}<br/>
+Gender: {{student.gender}}<br/>
+Username: {{student.username}}<br/>
+Class ID: {{student.classid_id}}<br/>
+Class Name: {{class_id.class_name}}<br/>
+
+{% endblock %}

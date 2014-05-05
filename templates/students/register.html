@@ -1,0 +1,31 @@
+{%extends "base.html"%}
+{% block title %}
+Register Student Form
+{% endblock %}
+{%block content%}
+<h2>Register a Student</h2>
+<form action="/student/register/add/" method="post">
+<table>
+	<tr><td><label>First Name: </label></td><td><input type="text" name="first_name"/></td></tr>
+	<tr><td><label>Last Name: </label></td><td><input type="text" name="last_name"/></td></tr>	
+	<tr>
+		<td><label>Gender:</label></td>
+		<td><input type="radio" name="gender" value="male" checked="checked">Male<br/><input type="radio" name="gender" value="female">Female</td>
+	</tr>
+	<tr><td><label>Class:</label></td>		
+		<td>
+			<select name="class_id">
+				{%for class in classes %}
+					<option value="{{class.class_id}}">{{class.class_name}}</option>
+				{%endfor%}
+				
+			</select>
+			
+		</td>
+	</tr>
+	<tr><td><label>Username: </label></td><td><input type="text" name="username"/></td></tr>
+	<tr><td><label>Password: </label></td><td><input type="password" name="password"/></td></tr>
+	<tr><td><input type="submit" name="RegisterStudent" value="Register Student"/></td><td>{{msg.msg}}</td></tr>
+</table>
+</form>
+{%endblock%}
